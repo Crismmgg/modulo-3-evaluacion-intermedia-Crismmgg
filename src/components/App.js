@@ -1,10 +1,9 @@
 import React from "react";
-import "../App.css";
+import "../App.scss";
 import apiData from "../api/data.json";
 import List from "./PokeList";
 import Pokemon from "./Pokemon";
 
-console.log(apiData);
 class App extends React.Component {
   constructor() {
     super();
@@ -15,11 +14,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="">
-        Holi
+      <div>
+        <h1 className="main-title">Mi lista de Pokemons</h1>
         <List>
-          {this.state.pokemonData.map((pokemon, index) => {
-            return <Pokemon key={index} pokemon={pokemon} />;
+          {this.state.pokemonData.map(pokemon => {
+            return <Pokemon key={pokemon.id} pokemon={pokemon} />;
           })}
         </List>
       </div>
