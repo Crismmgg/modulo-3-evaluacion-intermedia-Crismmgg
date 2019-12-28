@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
 function List(props) {
   return (
     <div>
-      <ul className="list">{props.children}</ul>
+      <ul className='list'>{props.children}</ul>
     </div>
   );
 }
